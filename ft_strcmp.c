@@ -6,18 +6,16 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:14:49 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/20 09:17:22 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:17:05 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp (char *s1, char *2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
 	i = 0;
-	while (s1[i] == s2[i] != '\0' && s2[i] != '\0')
-	{
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 		i++;
-		return (s1[i] - s2[i]);
-	}
+	return (s1[i] - s2[i]);
 }

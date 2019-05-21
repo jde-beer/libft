@@ -6,13 +6,13 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:28:31 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/20 13:02:15 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:20:58 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strncmp (char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 

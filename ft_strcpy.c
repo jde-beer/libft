@@ -6,11 +6,11 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/20 09:12:50 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:09:23 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_strcpy(char *s1, char *s2)
+char	ft_strcpy(char *s1, char *s2)
 {
 	int k;
 
