@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 12:51:59 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/05/23 10:08:12 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/05/25 12:33:29 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strcpy(char *dest,const char *src)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int k;
+	size_t		j;
+	const char	*str1;
+	const char	*str2;
 
-	k = 0;
-	while (src[k] != '\0')
-	{
-		dest[k] = src[k];
-		k++;
-	}
-	dest[k] = '\0';
-	return (dest);
+	str1 = (const char *)s1;
+	str2 = (const char *)s2;
+	j = 0;
+	if (str1 == str2 || n == 0)
+		return (0);
+	while (str1[j] == str2[j] && j < n)
+		j++;
+	if (j == n)
+		return (0);
+	return ((unsigned char) str1[j] - (unsigned char)str2[j]);
 }

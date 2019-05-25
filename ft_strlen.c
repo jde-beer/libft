@@ -6,11 +6,13 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:56:40 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/21 10:10:07 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/25 11:56:06 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int i;
 

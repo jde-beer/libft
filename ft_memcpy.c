@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 12:51:59 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/05/23 13:15:41 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/05/25 12:35:02 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest,const char *src)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int k;
+	unsigned int j;
 
-	k = 0;
-	while (src[k] != '\0')
+	j = 0;
+	while (j < n)
 	{
-		dest[k] = src[k];
-		k++;
+		((unsigned char *)dst)[j] = ((unsigned char *)src)[j];
+		j += 1;
 	}
-	dest[k] = '\0';
-	return (dest);
+	return (dst);
 }

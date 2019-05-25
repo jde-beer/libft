@@ -6,20 +6,26 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:02:27 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/21 10:12:31 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/24 13:13:25 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncpy(char *dst, const char *src, unsigned int k)
+#include "libft.h"
+
+char	*ft_strncpy(char *dst, const char *src, size_t k)
 {
-	unsigned int j;
+	size_t j;
 
 	j = 0;
-	while (src[j] != '\0' && j < k)
+	while (src[j] != '\0' && (j < k))
 	{
 		dst[j] = src[j];
 		j++;
 	}
-	dst[j] = '\0';
+	while (j < k)
+	{
+		dst[j] = '\0';
+		j++;
+	}
 	return (dst);
 }

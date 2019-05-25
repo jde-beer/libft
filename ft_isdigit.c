@@ -6,13 +6,15 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:50:45 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/21 14:52:23 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/05/25 13:16:08 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_digit(int c)
+#include "libft.h"
+
+int		ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
-	return (0)
+	return (0);
 }
