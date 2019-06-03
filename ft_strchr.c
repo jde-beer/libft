@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:39:58 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 10:36:13 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/03 14:17:05 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char		*ft_strchr(const char *src, int c)
 	j = 0;
 	while (src[j] != '\0')
 	{
-		if (src[j] == (char) c)
-			return ((char *) src + j);
+		if (src[j] == (char)c)
+			return ((char *)src + j);
 		j++;
 	}
-	if (src[j] == '\0' && (char) c == '\0')
-		return ((char *) src + j);
+	if (src[j] == '\0' && (char)c == '\0')
+		return ((char *)src + j);
 	return (0);
 }

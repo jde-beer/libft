@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/03 14:17:55 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/03 15:01:03 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/03 15:28:29 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	int k;
+	int i;
 
-	k = 0;
-	while (src[k] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		dest[k] = src[k];
-		k++;
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
-	dest[k] = '\0';
-	return (dest);
 }

@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/03 14:17:55 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/03 14:36:43 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/03 14:41:02 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_bzero(void *s, size_t n)
 {
-	int k;
-
-	k = 0;
-	while (src[k] != '\0')
-	{
-		dest[k] = src[k];
-		k++;
-	}
-	dest[k] = '\0';
-	return (dest);
+	ft_memset(s, 0, n);
 }

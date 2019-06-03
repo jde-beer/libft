@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:10:02 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/03 14:17:55 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/03 15:32:33 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/03 16:46:51 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void	ft_putnbr(int n)
 {
-	int k;
-
-	k = 0;
-	while (src[k] != '\0')
+	if (n == -2147483647)
+		ft_putstr("-2147483647");
+	else if (n < 0)
 	{
-		dest[k] = src[k];
-		k++;
+		ft_putchar('-');
+		ft_putnbr(-n);
 	}
-	dest[k] = '\0';
-	return (dest);
+	else if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putnbr(n + '0');
 }

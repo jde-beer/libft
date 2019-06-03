@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:08:12 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 12:33:29 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/03 14:14:09 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		j++;
 	if (j == n)
 		return (0);
-	return ((unsigned char) str1[j] - (unsigned char)str2[j]);
+	return ((unsigned char)str1[j] - (unsigned char)str2[j]);
 }
