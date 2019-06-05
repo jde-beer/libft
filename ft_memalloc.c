@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 15:32:33 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/05 09:18:28 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/05 15:53:56 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/05 16:00:15 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	*ft_memalloc(size_t size)
 {
-	if (n == -2147483648)
-		ft_putstr("-2147483648");
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar('-');
-			n *= -1;
-		}
-		if (n > 9)
-			ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
-	}
+	unsigned char *jp;
+
+	jp = malloc(size);
+	if (jp == NULL)
+		return (0);
+
+	ft_bzero (jp, size);
+	return (jp);
 }
