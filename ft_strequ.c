@@ -6,18 +6,18 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:42:52 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/05 15:44:39 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/06 09:47:45 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	if (s1 && s2)
 	{
-		if (ft_strcmp(s1, s2) == 0)
-			return (i);
+		if (ft_strcmp((char *)s1, (char *)s2) == 0)
+			return (1);
 	}
 	return (0);
 }

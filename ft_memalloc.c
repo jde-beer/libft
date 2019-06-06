@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:53:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/05 16:00:15 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/06 09:56:25 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memalloc(size_t size)
 	jp = malloc(size);
 	if (jp == NULL)
 		return (0);
-
-	ft_bzero (jp, size);
+	ft_bzero(jp, size);
 	return (jp);
 }
