@@ -6,7 +6,7 @@
 #    By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 14:00:16 by jde-beer          #+#    #+#              #
-#    Updated: 2019/06/10 11:43:18 by jde-beer         ###   ########.fr        #
+#    Updated: 2019/06/10 16:22:24 by jde-beer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,15 @@ CC = gcc
 
 Cflags = -Wall -Werror -Wextra
 
-SOURCES = *.c
-
-OBJECTS = *.o
+SOURCES = $(realpath $(shell find . -type f))
 
 all: $(NAME)
 
 $(NAME):
+	mkdir objs; \
+	cd objs; \
 	$(CC) $((FLAGS) -c $(SOURCES)
-	ar rc $(NAME) $(OBJECTS)
+	ar rc $(NAME) $(shell find objs -type f)
 	ranlib $(NAME)
 
 clean:
