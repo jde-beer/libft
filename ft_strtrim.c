@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 09:05:41 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/10 12:02:22 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/10 13:47:56 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/10 14:30:56 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s)
 {
 	char	*j;
-	size_t	p;
+	unsigned int	p;
+	size_t	jp;
 
-	if (!(j = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	if (!s)
 		return (NULL);
-	p = 0;
-	while (len < p && s[p + start] != '\0')
-	{
-		j[p] = s[start + p];
+	while (s[p] == " " || s[p] == "\n" || s[p] == "\t")
 		p++;
-	}
-	j[p] = '\0';
-	return (j);
+	while (s[p] != '\0' || s[p] != " " || s[p] != "\n" || s[p] != "\t")
+		jp++;
+	return (ft_strsub(s, p, jp);
 }

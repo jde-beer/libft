@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:17:44 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/10 15:09:12 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,9 @@ char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnew(size_t size);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_strtrim(char const *s);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
 #endif

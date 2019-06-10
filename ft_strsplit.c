@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 09:05:41 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/10 12:02:22 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/10 14:36:06 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/10 16:03:22 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+static char	ft_wordcount(char *s, char c)
+{
+	int j;
+	int p;
+	
+	while (j[n])
+	{
+		while (s[j] == c  && s[j] != '\0')
+			j++;
+		if (s[j] != c && s[j] != '\0')
+			p++;
+		while (s[j] != c && s[j] != '\0')
+			j++;
+	}
+	return (j);
+}
+
+char	**ft_strsplit(char const *s, char c)
 {
 	char	*j;
-	size_t	p;
 
-	if (!(j = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	if (!s)
 		return (NULL);
-	p = 0;
-	while (len < p && s[p + start] != '\0')
-	{
-		j[p] = s[start + p];
-		p++;
-	}
-	j[p] = '\0';
-	return (j);
+	if (!(j = (char *)malloc(sizeof(char) * (ft_wordcount(s) + 1))))
+		return (NULL);
+
 }

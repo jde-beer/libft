@@ -6,7 +6,7 @@
 #    By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 14:00:16 by jde-beer          #+#    #+#              #
-#    Updated: 2019/05/24 12:55:36 by jde-beer         ###   ########.fr        #
+#    Updated: 2019/06/10 11:43:18 by jde-beer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ $(NAME):
 	$(CC) $((FLAGS) -c $(SOURCES)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
-	rm -f $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
