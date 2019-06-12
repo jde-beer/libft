@@ -6,18 +6,18 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 14:36:06 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/11 14:05:04 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/12 16:50:28 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	ft_wordcount(char *s, char c)
+static char	ft_wordcount(char const *s, char c)
 {
 	int j;
 	int p;
 	
-	while (j[n])
+	while (s[j])
 	{
 		while (s[j] == c  && s[j] != '\0')
 			j++;
@@ -29,7 +29,7 @@ static char	ft_wordcount(char *s, char c)
 	return (j);
 }
 
-static int	ft_wordlength(char *s, char c)
+static int	ft_wordlength(char const *s, char c)
 {
 	int	j;
 	int	p;
@@ -51,27 +51,29 @@ static int	ft_wordlength(char *s, char c)
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char	**j;
-	int		p;
-	int		d;
-	int		e;
+	char		**j;
+	size_t		p;
+	size_t		d;
+	size_t		e;
 
 	p = 0;
 	d = 0;
 	if (!s)
 		return (NULL);
-	if (!(j = (char **)malloc(sizeof(char) * (static ft_wordcount(s, c) + 1))))
+	if (!(j = (char **)malloc(sizeof(char) * (ft_wordcount(s, c) + 1))))
 		return (NULL);
-	while (p < ft_wordcount(s, c))
+	while ((int)p < ft_wordcount(s, c))
 	{
 		e = 0;
-		if (!(j = ft_strnew(static ft_wordlength(&s[d], c) + 1)))
+		if (!(j[p] = ft_strnew(ft_wordlength(&s[d], c) + 1)))
 			j[p] = NULL;
 		while (s[d] == c)
 			d++;
-		while (s[d] != c && s[p])
-			j[p][e++] == j[p++];
+		while (s[d] != c && s[d])
+			j[p][e++] = s[d++];
 		j[p][e] = '\0';
 		p++;
 	}
+	j[p] = 0;
+	return (j);
 }
