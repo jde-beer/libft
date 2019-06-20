@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 13:47:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/12 16:49:00 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/20 11:39:27 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*j;
 	unsigned int	p;
-	size_t	jp;
+	size_t			jp;
 
+	jp = 0;
+	p = 0;
 	if (!s)
-		return (NULL);
+		return (0);
 	while (s[p] == ' ' || s[p] == '\n' || s[p] == '\t')
 		p++;
 	while (s[p] != '\0' || s[p] != ' ' || s[p] != '\n' || s[p] != '\t')

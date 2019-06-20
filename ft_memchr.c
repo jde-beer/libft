@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:46:12 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/18 09:31:07 by jde-beer         ###   ########.fr       */
+/*   Created: 2019/06/13 11:16:51 by jde-beer          #+#    #+#             */
+/*   Updated: 2019/06/13 11:45:41 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	char	*dest;
+	const char	*j;
+	size_t		p;
 
-	i = 0;
-	dest = (char *)malloc(sizeof(char) * i + 1);
-	while (src[i] != '\0')
+	p = 0;
+	j = (const char *)s;
+	while (p < n)
 	{
-		dest[i] = src[i];
-		i++;
+		if (j[p] == (const char)c)
+			return ((void *)j + p);
+		p++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }
