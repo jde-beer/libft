@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/12 16:55:36 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/20 11:51:39 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,11 @@ void	ft_memdel(void **ap);
 void	ft_strdel(char **as);
 void	ft_swap(int *a, int *b);
 void	ft_strclr(char *s);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *src, int c);
+char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strdup(char *src);
 size_t	ft_strlcat(char *s1, const char *s2, size_t size);
@@ -63,6 +65,7 @@ size_t	ft_strlen(const char *str);
 char	*ft_strncat(char *s1, const char *s2, unsigned int n);
 char	*ft_strncpy(char *dst, const char *src, size_t k);
 char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strnew(size_t size);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
