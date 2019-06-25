@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 14:36:06 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/13 14:36:28 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/25 09:45:36 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	char	ft_wordcount(char const *s, char c)
 		while (s[j] != c && s[j] != '\0')
 			j++;
 	}
-	return (j);
+	return (p);
 }
 
 static	int		ft_wordlength(char const *s, char c)
@@ -53,16 +53,16 @@ static	int		ft_wordlength(char const *s, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char		**j;
-	size_t		p;
-	size_t		d;
-	size_t		e;
+	char	**j;
+	size_t	p;
+	size_t	d;
+	size_t	e;
 
 	p = 0;
 	d = 0;
 	if (!s)
 		return (NULL);
-	if (!(j = (char **)malloc(sizeof(char) * (ft_wordcount(s, c) + 1))))
+	if (!(j = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
 		return (NULL);
 	while ((int)p < ft_wordcount(s, c))
 	{
