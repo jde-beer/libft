@@ -6,13 +6,13 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:28:31 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 13:43:08 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/02 13:53:58 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_strncmp(char *s1, char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
 
