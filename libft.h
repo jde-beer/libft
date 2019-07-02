@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/20 11:51:39 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/02 11:13:08 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isprint(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_atoi(const char *str);
-int		ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
