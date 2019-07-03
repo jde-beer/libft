@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/07/02 11:13:08 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/03 13:51:07 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_atoi(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
-int		ft_strncmp(char *s1, char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strequ(char const *s1, char const *s2);
@@ -59,11 +59,11 @@ char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *src, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 size_t	ft_strlcat(char *s1, const char *s2, size_t size);
 size_t	ft_strlen(const char *str);
 char	*ft_strncat(char *s1, const char *s2, unsigned int n);
-char	*ft_strncpy(char *dst, const char *src, size_t k);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strnew(size_t size);
