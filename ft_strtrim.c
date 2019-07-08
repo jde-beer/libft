@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 13:47:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/20 11:39:27 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/06/20 16:22:01 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,17 @@ char	*ft_strtrim(char const *s)
 	unsigned int	p;
 	size_t			jp;
 
-	jp = 0;
+	jp = ft_strlen(s);
 	p = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	while (s[p] == ' ' || s[p] == '\n' || s[p] == '\t')
 		p++;
-	while (s[p] != '\0' || s[p] != ' ' || s[p] != '\n' || s[p] != '\t')
-		jp++;
+	while (s[jp - 1] == '\0' || s[jp - 1] == ' ' || s[jp - 1] == '\n'
+			|| s[jp - 1] == '\t')
+	{
+		jp--;
+	}
+	jp = jp - p;
 	return (ft_strsub(s, p, jp));
 }
