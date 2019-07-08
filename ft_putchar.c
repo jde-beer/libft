@@ -6,13 +6,13 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:08:22 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 11:21:24 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/08 11:11:34 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (0);
