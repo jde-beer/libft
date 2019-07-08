@@ -6,17 +6,12 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/07/03 13:51:07 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/08 14:13:50 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <stdio.h>
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
@@ -56,6 +51,8 @@ void	ft_strclr(char *s);
 void	*ft_memchr(const void *s, int c, size_t n);
 
 char	*ft_strcat(char *s1, const char *s2);
+
+
 char	*ft_strchr(const char *src, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);

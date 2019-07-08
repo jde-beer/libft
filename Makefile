@@ -6,7 +6,7 @@
 #    By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 14:00:16 by jde-beer          #+#    #+#              #
-#    Updated: 2019/06/12 16:52:13 by jde-beer         ###   ########.fr        #
+#    Updated: 2019/07/08 14:04:59 by jde-beer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SOURCES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 		  ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c\
 		  ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c\
 		  ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_swap.c\
-		  ft_tolower.c ft_toupper.c
+		  ft_tolower.c ft_toupper.c ft_memchr.c ft_strnstr.c ft_strrchr.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
