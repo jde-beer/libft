@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/07/10 11:37:44 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/10 12:28:07 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ void	ft_strclr(char *s);
 void	*ft_memchr(const void *s, int c, size_t n);
 
 char	*ft_strcat(char *s1, const char *s2);
-
-
 char	*ft_strchr(const char *src, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);
