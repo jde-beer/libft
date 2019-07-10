@@ -6,12 +6,16 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:28:56 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/07/08 14:13:50 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/10 11:37:44 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
