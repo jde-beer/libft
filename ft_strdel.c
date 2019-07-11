@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 10:04:59 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/06 10:57:18 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/11 16:35:08 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_strdel(char **as)
 {
-	while (*as)
+	if (as)
 	{
-		free(*as);
-		(*as) = NULL;
+		while (*as)
+		{
+			free(*as);
+			(*as) = NULL;
+		}
 	}
 }

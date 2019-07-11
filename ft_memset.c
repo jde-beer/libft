@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 15:32:27 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/05/25 13:09:33 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/11 16:18:14 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	j = (unsigned char *)b;
 	if (len == 0)
-		return (0);
+		return (b);
 	while (len > 0)
 	{
 		*j = (unsigned char)c;

@@ -6,7 +6,7 @@
 /*   By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:08:12 by jde-beer          #+#    #+#             */
-/*   Updated: 2019/06/03 14:14:09 by jde-beer         ###   ########.fr       */
+/*   Updated: 2019/07/11 16:20:53 by jde-beer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	j = 0;
 	if (str1 == str2 || n == 0)
 		return (0);
-	while (str1[j] == str2[j] && j < n)
+	while (str1[j] == str2[j] && j + 1 < n)
 		j++;
 	if (j == n)
 		return (0);

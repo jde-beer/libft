@@ -6,7 +6,7 @@
 #    By: jde-beer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/23 14:00:16 by jde-beer          #+#    #+#              #
-#    Updated: 2019/07/08 14:04:59 by jde-beer         ###   ########.fr        #
+#    Updated: 2019/07/11 15:52:00 by jde-beer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEADER = libft.h
 
 CC = gcc
 
-Cflags = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 CMP = -c -I $(HEADER)
 
@@ -37,7 +37,7 @@ OBJECTS = $(SOURCES:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
-	$(CC) $((FLAGS) $(CMP) $(SOURCES)
+	$(CC) $(CFLAGS) $(CMP) $(SOURCES)
 	ar rcs $(NAME) $(OBJECTS)
 
 clean:
